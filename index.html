@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интернет-магазин суши</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__container">
+    <a href="/" class="logo">
+      <img src="img/logo/logo.jpg"  alt="Логотип ЭлектроТехника">
+      <span class="logo__text">Интернет-магазин суши</span>
+    </a>
+    <p class="header__slogan">круто и вкусно</p>
+  </div>
+</header>
+
+<main class="main">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="row">
+
+          <div class="col-6">
+            <div class="card product-card">
+              <img class="product-card__image" src="img/product/filadelfia.jpg" alt="Филадельфия">
+              <div class="product-card__body">
+                <h4 class="product-card__title">Филадельфия</h4>
+                <p class="product-card__description"><small class="text-muted">6 шт.</small></p>
+
+                <div class="product-card__details">
+                  <div class="quantity-selector">
+                    <button class="quantity-selector__button quantity-decrease" data-action="minus" aria-label="Уменьшить количество">-</button>
+                    <div class="quantity-selector__value quantity" data-counter="1">1</div>
+                    <button class="quantity-selector__button quantity-increase" data-action="plus" aria-label="Увеличить количество">+</button>
+                  </div>
+
+                  <div class="product-card__price">
+                    <div class="product-card__weight">180г.</div>
+                    <div class="product-card__currency">300</div>
+                  </div>
+                </div>
+
+                <button type="button" class="btn btn-block btn-outline-warning">В корзину</button>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card product-card" data-id="02">
+              <img class="product-card__image" src="img/product/kalifornia.jpg" alt="Калифорния темпура">
+              <div class="product-card__body">
+                <h4 class="product-card__title">Калифорния темпура</h4>
+                <p class="product-card__description"><small data-items-in-box class="text-muted">6 шт.</small></p>
+
+                <div class="product-card__details">
+                  <div class="quantity-selector">
+                    <button class="quantity-selector__button quantity-decrease" data-action="minus" aria-label="Уменьшить количество">-</button>
+                    <div class="quantity-selector__value quantity" data-counter="1">1</div>
+                    <button class="quantity-selector__button quantity-increase" data-action="plus" aria-label="Увеличить количество">+</button>
+                  </div>
+
+                  <div class="product-card__price">
+                    <div class="product-card__weight">280г.</div>
+                    <div class="product-card__currency">300</div>
+                  </div>
+                </div>
+
+                <button type="button" class="btn btn-block btn-outline-warning">В корзину</button>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card product-card" data-id="03">
+              <img class="product-card__image" src="img/product/filadLite.jpg" alt="Запеченный ролл «Калифорния»">
+              <div class="product-card__body">
+                <h4 class="product-card__title">Запеченый ролл «Калифорния»</h4>
+                <p class="product-card__description"><small data-items-in-box class="text-muted">6 шт.</small></p>
+
+                <div class="product-card__details">
+                  <div class="quantity-selector">
+                    <button class="quantity-selector__button quantity-decrease" data-action="minus" aria-label="Уменьшить количество">-</button>
+                    <div class="quantity-selector__value quantity" data-counter="1">1</div>
+                    <button class="quantity-selector__button quantity-increase" data-action="plus" aria-label="Увеличить количество">+</button>
+                  </div>
+
+                  <div class="product-card__price">
+                    <div class="product-card__weight">300г.</div>
+                    <div class="product-card__currency">350</div>
+                  </div>
+                </div>
+
+                <button type="button" class="btn btn-block btn-outline-warning">В корзину</button>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__container">
+    <p>&copy; 2024 ЭлектроТехника</p>
+  </div>
+</footer>
+
+<script src="js/index.js"></script>
+</body>
+</html>
