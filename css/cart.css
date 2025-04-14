@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif; /* Более современный шрифт */
+    margin: 0;
+    padding: 0; /* Убираем отступы по умолчанию */
+    background-color: #f5f5f5; /* Светло-серый фон */
+    color: #333; /* Темно-серый цвет текста */
+}
+
+.container { /* Добавляем контейнер для центрирования контента */
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #fff; /* Белый фон */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0; /* Светло-серая граница */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em; /* Увеличиваем размер заголовка */
+    color: #e44d26; /* Красный цвет, ассоциирующийся с Японией */
+}
+
+header a {
+    display: inline-block; /* Делаем ссылку блочным элементом */
+    margin-top: 10px;
+    color: #3498db; /* Синий цвет ссылки */
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+header a:hover {
+    background-color: #3498db; /* Синий фон при наведении */
+    color: #fff;
+}
+
+#cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.cart-item {
+    background-color: #fff; /* Белый фон */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для объема */
+}
+
+.cart-item h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.cart-item p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #777;
+}
+
+.cart-item button {
+    padding: 10px 15px;
+    background-color: #e44d26; /* Красный цвет кнопки */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s; /* Плавный переход */
+}
+
+.cart-item button:hover {
+    background-color: #c0392b; /* Более темный красный при наведении */
+}
+
+footer {
+    background-color: #fff; /* Белый фон */
+    padding: 20px;
+    text-align: right;
+    border-top: 2px solid #e0e0e0; /* Светло-серая граница */
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+footer .cart-count { /* Стили для количества товаров */
+    font-weight: bold;
+    color: #e44d26; /* Красный цвет для выделения */
+}
+
+footer button {
+    padding: 12px 25px;
+    background-color: #27ae60; /* Зеленый цвет кнопки */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s; /* Плавный переход */
+}
+
+footer button:hover {
+    background-color: #219651; /* Более темный зеленый при наведении */
+}

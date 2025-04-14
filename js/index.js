@@ -68,5 +68,24 @@ document.addEventListener('DOMContentLoaded', () =>
         localStorageData['cart'] = cart; // Обновляем корзину в объекте данных
         localStorage.setItem('cart', JSON.stringify(localStorageData)); // Сохраняем обратно в localStorage
         alert('Товар добавлен в корзину!');
+
+        updateCartCount();
     };
+
+
+    const updateCartCount = () => {
+        let localStorageData = JSON.parse(localStorage.getItem('cart')) || {};
+        let cart = localStorageData['cart'] || {};
+        let totalQuantity = 0;
+
+        for(let productId in cart) {
+            if(cart.hasOwnProperty(productId)){
+                totalQuantity += cart[productId].quantity;
+            }
+        }
+
+        const cartCountElement = document.querySelector('.cart-count');
+        cartCountElement.textContent = totalQuantity;
+    };
+    updateCartCount();
 });

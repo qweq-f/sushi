@@ -1,4 +1,3 @@
-
 /* Общие стили */
 body {
     font-family: 'Roboto', sans-serif;
@@ -242,4 +241,31 @@ body {
     .header__slogan {
         display: none; /* Hide slogan on very small screens */
     }
+}
+
+
+
+.cart-icon {
+    display: flex; /* Для выравнивания изображения и количества */
+    align-items: center; /* Выравнивание по вертикали */
+    position: relative; /* Для позиционирования количества поверх значка */
+    color: #333; /* Цвет значка и количества */
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+}
+
+.cart-icon img {
+    width: 30px; /* Размер значка */
+    height: 30px;
+    margin-right: 5px; /* Отступ между значком и количеством */
+}
+
+.cart-count {
+    position: absolute; /* Позиционируем количество поверх значка */
+    top: -5px; /* Сдвигаем вверх */
+    right: -5px; /* Сдвигаем вправо */
+    background-color: red; /* Цвет фона количества */
+    color: white; /* Цвет текста количества */
+    border-radius: 50%; /* Делаем круглым */
+    padding: 2px 5px; /* Отступы */
+    font-size: 12px; /* Размер шрифта */
 }

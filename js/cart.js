@@ -63,6 +63,7 @@ const changeQuantity = (productId, change) => {
 
         localStorageData['cart'] = cart; // Обновляем корзину в объекте
         localStorage.setItem('cart', JSON.stringify(localStorageData)); // Сохраняем обратно в localStorage
+        updateCartCount();
     }
 };
 
@@ -73,6 +74,23 @@ const removeItem = (productId) => {
 
     localStorageData['cart'] = cart; // Обновляем корзину в объекте
     localStorage.setItem('cart', JSON.stringify(localStorageData)); // Сохраняем обратно в localStorage
+    updateCartCount();
+};
+
+const updateCartCount = () => {
+    let localStorageData = JSON.parse(localStorage.getItem('cart')) || {};
+    let cart = localStorageData['cart'] || {};
+    let totalQuantity = 0;
+
+    for (let productId in cart) {
+        if (cart.hasOwnProperty(productId)) {
+            totalQuantity += cart[productId].quantity;
+        }
+    }
+
+    const cartCountElement = document.querySelector('.cart-count');
+    cartCountElement.textContent = totalQuantity;
 };
 
 displayCart();
+
