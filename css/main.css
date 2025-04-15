@@ -9,7 +9,7 @@ body {
 }
 
 *, *::before, *::after {
-    box-sizing: border-box; /* Важно для правильного расчета размеров */
+    box-sizing: border-box;
 }
 
 .container {
@@ -21,13 +21,13 @@ body {
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    margin-right: -5px;
+    margin-left: -5px;
 }
 
 .col {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 115px;
+    padding-left: 115px;
 }
 
 .col-6 {
@@ -57,14 +57,14 @@ body {
 }
 
 .logo img {
-    width: 60px;
-    height: 60px;
+    width: 110px;
+    height: 110px;
     margin-right: 15px;
     border-radius: 50%; /* Круглый логотип */
 }
 
 .logo__text {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
 }
 
@@ -78,7 +78,7 @@ body {
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out; /* Плавная анимация при наведении */
 }
@@ -88,7 +88,7 @@ body {
 
 .product-card__image {
     width: 100%;
-    height: 220px;
+    height: 320px;
     object-fit: cover;
     border-bottom: 1px solid #eee; /* Разделитель между изображением и контентом */
 }
@@ -98,14 +98,14 @@ body {
 }
 
 .product-card__title {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: 500;
     margin-bottom: 10px;
     color: #333;
 }
 
 .product-card__description {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #777;
     margin-bottom: 15px;
 }
@@ -254,15 +254,15 @@ body {
 }
 
 .cart-icon img {
-    width: 30px; /* Размер значка */
-    height: 30px;
+    width: 60px; /* Размер значка */
+    height: 60px;
     margin-right: 5px; /* Отступ между значком и количеством */
 }
 
 .cart-count {
     position: absolute; /* Позиционируем количество поверх значка */
-    top: -5px; /* Сдвигаем вверх */
-    right: -5px; /* Сдвигаем вправо */
+    top: 1px; /* Сдвигаем вверх */
+    right: 1px; /* Сдвигаем вправо */
     background-color: red; /* Цвет фона количества */
     color: white; /* Цвет текста количества */
     border-radius: 50%; /* Делаем круглым */
