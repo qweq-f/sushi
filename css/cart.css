@@ -115,3 +115,96 @@ footer button {
 footer button:hover {
     background-color: #219651; /* Более темный зеленый при наведении */
 }
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Распределяем элементы по ширине */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* Добавляем отступ между элементами */
+}
+
+.cart-item__image {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-item__details {
+    flex-grow: 1; /* Занимает оставшееся пространство */
+}
+
+.cart-item h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-item p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.cart-item__quantity {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.cart-item__controls {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item__controls button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+    font-size: 0.8em; /* Уменьшаем размер шрифта */
+}
+
+.cart-item__controls button.increase-quantity,
+.cart-item__controls button.decrease-quantity {
+    background-color: #27ae60; /* Зеленый цвет */
+    color: #fff;
+}
+
+.cart-item__controls button.increase-quantity:hover,
+.cart-item__controls button.decrease-quantity:hover {
+    background-color: #219651;
+}
+
+.cart-item__controls button.remove-item {
+    background-color: #e44d26; /* Красный цвет */
+    color: #fff;
+}
+
+.cart-item__controls button.remove-item:hover {
+    background-color: #c0392b;
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 600px) {
+    .cart-item {
+        flex-direction: column; /* Элементы располагаются вертикально */
+        align-items: flex-start; /* Выравниваем по левому краю */
+    }
+
+    .cart-item__image {
+        margin-bottom: 10px; /* Отступ для изображения */
+    }
+
+    .cart-item__details {
+        width: 100%; /* Занимает всю ширину */
+    }
+}

@@ -17,13 +17,20 @@ const displayCart = () => {
             const cartItemElement = document.createElement('div');
             cartItemElement.classList.add('cart-item');
             cartItemElement.innerHTML = `
-                <h3>${item.title}</h3>
-                <p>${item.weight}</p>
-                <p>Цена: ${item.price} руб.</p>
-                <p>Количество: ${item.quantity}</p>
-                <button class="increase-quantity" data-id="${item.id}">+</button>
-                <button class="decrease-quantity" data-id="${item.id}">-</button>
-                <button class="remove-item" data-id="${item.id}">Удалить</button>
+                <div class="cart-item">
+    <img src="${item.imageUrl}" alt="${item.title}" class="cart-item__image">
+    <div class="cart-item__details">
+        <h3>${item.title}</h3>
+        <p>${item.weight}</p>
+        <p>Цена: ${item.price} руб.</p>
+        <p class="cart-item__quantity">Количество: ${item.quantity}</p>
+    </div>
+    <div class="cart-item__controls">
+        <button class="increase-quantity" data-id="${item.id}">+</button>
+        <button class="decrease-quantity" data-id="${item.id}">-</button>
+        <button class="remove-item" data-id="${item.id}">Удалить</button>
+    </div>
+</div>
             `;
             cartItemsContainer.appendChild(cartItemElement);
             totalPrice += item.price * item.quantity;
