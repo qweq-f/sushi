@@ -1,43 +1,43 @@
 body {
-    font-family: Arial, sans-serif; /* Более современный шрифт */
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0; /* Убираем отступы по умолчанию */
-    background-color: #f5f5f5; /* Светло-серый фон */
-    color: #333; /* Темно-серый цвет текста */
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-.container { /* Добавляем контейнер для центрирования контента */
+.container {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
 }
 
 header {
-    background-color: #fff; /* Белый фон */
+    background-color: #fff;
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #e0e0e0; /* Светло-серая граница */
+    border-bottom: 2px solid #e0e0e0;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em; /* Увеличиваем размер заголовка */
-    color: #e44d26; /* Красный цвет, ассоциирующийся с Японией */
+    font-size: 2em;
+    color: #e44d26;
 }
 
 header a {
-    display: inline-block; /* Делаем ссылку блочным элементом */
+    display: inline-block;
     margin-top: 10px;
-    color: #3498db; /* Синий цвет ссылки */
+    color: #3498db;
     text-decoration: none;
     padding: 10px 20px;
     border: 1px solid #3498db;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header a:hover {
-    background-color: #3498db; /* Синий фон при наведении */
+    background-color: #3498db;
     color: #fff;
 }
 
@@ -49,11 +49,11 @@ header a:hover {
 }
 
 .cart-item {
-    background-color: #fff; /* Белый фон */
+    background-color: #fff;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для объема */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .cart-item h3 {
@@ -70,24 +70,24 @@ header a:hover {
 
 .cart-item button {
     padding: 10px 15px;
-    background-color: #e44d26; /* Красный цвет кнопки */
+    background-color: #e44d26;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-right: 10px;
-    transition: background-color 0.3s; /* Плавный переход */
+    transition: background-color 0.3s;
 }
 
 .cart-item button:hover {
-    background-color: #c0392b; /* Более темный красный при наведении */
+    background-color: #c0392b;
 }
 
 footer {
-    background-color: #fff; /* Белый фон */
+    background-color: #fff;
     padding: 20px;
     text-align: right;
-    border-top: 2px solid #e0e0e0; /* Светло-серая граница */
+    border-top: 2px solid #e0e0e0;
 }
 
 footer p {
@@ -96,36 +96,36 @@ footer p {
     color: #555;
 }
 
-footer .cart-count { /* Стили для количества товаров */
+footer .cart-count {
     font-weight: bold;
-    color: #e44d26; /* Красный цвет для выделения */
+    color: #e44d26;
 }
 
 footer button {
     padding: 12px 25px;
-    background-color: #27ae60; /* Зеленый цвет кнопки */
+    background-color: #27ae60;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.1em;
-    transition: background-color 0.3s; /* Плавный переход */
+    transition: background-color 0.3s;
 }
 
 footer button:hover {
-    background-color: #219651; /* Более темный зеленый при наведении */
+    background-color: #219651;
 }
 
 .cart-item {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Распределяем элементы по ширине */
+    justify-content: space-between;
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px; /* Добавляем отступ между элементами */
+    margin-bottom: 10px;
 }
 
 .cart-item__image {
@@ -137,7 +137,7 @@ footer button:hover {
 }
 
 .cart-item__details {
-    flex-grow: 1; /* Занимает оставшееся пространство */
+    flex-grow: 1;
 }
 
 .cart-item h3 {
@@ -170,12 +170,12 @@ footer button:hover {
     cursor: pointer;
     margin-right: 5px;
     transition: background-color 0.3s;
-    font-size: 0.8em; /* Уменьшаем размер шрифта */
+    font-size: 0.8em;
 }
 
 .cart-item__controls button.increase-quantity,
 .cart-item__controls button.decrease-quantity {
-    background-color: #27ae60; /* Зеленый цвет */
+    background-color: #27ae60;
     color: #fff;
 }
 
@@ -185,26 +185,24 @@ footer button:hover {
 }
 
 .cart-item__controls button.remove-item {
-    background-color: #e44d26; /* Красный цвет */
+    background-color: #e44d26;
     color: #fff;
 }
 
 .cart-item__controls button.remove-item:hover {
     background-color: #c0392b;
 }
-
-/* Адаптивность для маленьких экранов */
 @media (max-width: 600px) {
     .cart-item {
-        flex-direction: column; /* Элементы располагаются вертикально */
-        align-items: flex-start; /* Выравниваем по левому краю */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .cart-item__image {
-        margin-bottom: 10px; /* Отступ для изображения */
+        margin-bottom: 10px;
     }
 
     .cart-item__details {
-        width: 100%; /* Занимает всю ширину */
+        width: 100%;
     }
 }

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     successMessageDiv.style.display = 'none';
 
     form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Предотвращаем отправку формы
+        event.preventDefault(); // предотвращаем отправку формы
 
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
@@ -16,25 +16,25 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Простая проверка на минимальную длину пароля
+        // простая проверка на минимальную длину пароля
         if (password.length < 6) {
             showMessage('Пароль должен содержать не менее 6 символов.', 'error');
             return;
         }
 
-        // Сохраняем данные в localStorage
-        localStorage.setItem('registeredUsername', username); //Сохраняем имя пользователя
+        // сохраняем данные в localStorage
+        localStorage.setItem('registeredUsername', username); //сохраняем имя пользователя
         form.style.display = 'none';
         messageDiv.style.display = 'none';
         successMessageDiv.style.display = 'block';
 
-        // Очищаем форму
+        // очищаем форму
         form.reset();
     });
 
     function showMessage(message, type) {
         messageDiv.textContent = message;
-        messageDiv.className = 'message ' + type; // Добавляем класс для стилизации
-        messageDiv.style.display = 'block'; // Make sure the message is visible
+        messageDiv.className = 'message ' + type; // добавляем класс для стилизации
+        messageDiv.style.display = 'block';
     }
 });

@@ -1,9 +1,8 @@
-/* Общие стили */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5; /* Более мягкий фон */
+    background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
 }
@@ -36,7 +35,6 @@ body {
     padding-left: 15px;
 }
 
-/* Header */
 .header {
     background-color: #fff;
     padding: 20px 0;
@@ -60,7 +58,7 @@ body {
     width: 110px;
     height: 110px;
     margin-right: 15px;
-    border-radius: 50%; /* Круглый логотип */
+    border-radius: 50%;
 }
 
 .logo__text {
@@ -73,24 +71,23 @@ body {
     color: #777;
 }
 
-/* Product Card */
 .product-card {
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out; /* Плавная анимация при наведении */
+    transition: transform 0.2s ease-in-out;
 }
 .product-card:hover {
-    transform: scale(1.03); /* Эффект увеличения при наведении */
+    transform: scale(1.03);
 }
 
 .product-card__image {
     width: 100%;
     height: 320px;
     object-fit: cover;
-    border-bottom: 1px solid #eee; /* Разделитель между изображением и контентом */
+    border-bottom: 1px solid #eee;
 }
 
 .product-card__body {
@@ -129,17 +126,16 @@ body {
 .product-card__currency {
     font-size: 1.4rem;
     font-weight: 500;
-    color: #e44d26; /* Яркий цвет для цены */
+    color: #e44d26;
 }
 
-/* Quantity Selector */
 .quantity-selector {
     display: flex;
     align-items: center;
 }
 
 .quantity-selector__button {
-    background-color: #e44d26; /* Цвет акцента */
+    background-color: #e44d26;
     color: #fff;
     border: none;
     padding: 8px 12px;
@@ -161,7 +157,6 @@ body {
     text-align: center;
 }
 
-/* Button */
 .btn {
     display: inline-block;
     font-weight: 500;
@@ -204,8 +199,6 @@ body {
     background-color: #e44d26;
     border-color: #e44d26;
 }
-
-/* Footer */
 .footer {
     background-color: #333;
     color: #fff;
@@ -218,11 +211,9 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .col-6 {
-        width: 100%; /* Full width on small screens */
+        width: 100%;
     }
 
     .header__container {
@@ -239,33 +230,33 @@ body {
 
 @media (max-width: 576px) {
     .header__slogan {
-        display: none; /* Hide slogan on very small screens */
+        display: none;
     }
 }
 
 
 
 .cart-icon {
-    display: flex; /* Для выравнивания изображения и количества */
-    align-items: center; /* Выравнивание по вертикали */
-    position: relative; /* Для позиционирования количества поверх значка */
-    color: #333; /* Цвет значка и количества */
-    text-decoration: none; /* Убираем подчеркивание ссылки */
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #333;
+    text-decoration: none;
 }
 
 .cart-icon img {
-    width: 60px; /* Размер значка */
+    width: 60px;
     height: 60px;
-    margin-right: 5px; /* Отступ между значком и количеством */
+    margin-right: 5px;
 }
 
 .cart-count {
-    position: absolute; /* Позиционируем количество поверх значка */
-    top: 1px; /* Сдвигаем вверх */
-    right: 1px; /* Сдвигаем вправо */
-    background-color: red; /* Цвет фона количества */
-    color: white; /* Цвет текста количества */
-    border-radius: 50%; /* Делаем круглым */
-    padding: 2px 5px; /* Отступы */
-    font-size: 12px; /* Размер шрифта */
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
 }

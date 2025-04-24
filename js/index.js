@@ -9,28 +9,16 @@ document.addEventListener('DOMContentLoaded', () =>
 
     }
 
-
     const productCards = document.querySelectorAll('.product-card');
 
     productCards.forEach(card => {
         const decreaseButton = card.querySelector('.quantity-selector__button[data-action="minus"]');
-
         const increaseButton = card.querySelector('.quantity-selector__button[data-action="plus"]');
-
         const quantityValue = card.querySelector('.quantity-selector__value');
-
         const addToCartButton = card.querySelector('.btn-outline-warning'); // Находим кнопку "В корзину"
-
-
         const productId = card.dataset.id; // Получаем ID товара из атрибута data-id
-
-
         const productTitle = card.querySelector('.product-card__title').textContent; // Получаем название товара
-
-
         const productPrice = parseInt(card.querySelector('.product-card__currency').textContent); // Получаем цену товара
-
-
         const productWeight = card.querySelector('.product-card__weight').textContent;
 
 

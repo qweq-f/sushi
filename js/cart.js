@@ -2,9 +2,9 @@ const displayCart = () => {
     const cartItemsContainer = document.getElementById('cart-items');
     const totalPriceElement = document.getElementById('total-price');
 
-    // Получаем объект из localStorage, и уже из него извлекаем корзину
+    // получаем объект из localStorage, и уже из него извлекаем корзину
     let localStorageData = JSON.parse(localStorage.getItem('cart')) || {};
-    let cart = localStorageData['cart'] || {}; // Получаем объект корзины
+    let cart = localStorageData['cart'] || {}; // получаем объект корзины
 
     let totalPrice = 0;
 
@@ -68,8 +68,8 @@ const changeQuantity = (productId, change) => {
             delete cart[productId];
         }
 
-        localStorageData['cart'] = cart; // Обновляем корзину в объекте
-        localStorage.setItem('cart', JSON.stringify(localStorageData)); // Сохраняем обратно в localStorage
+        localStorageData['cart'] = cart; // обновляем корзину в объекте
+        localStorage.setItem('cart', JSON.stringify(localStorageData)); // сохраняем обратно в localStorage
         updateCartCount();
     }
 };
@@ -80,7 +80,7 @@ const removeItem = (productId) => {
     delete cart[productId];
 
     localStorageData['cart'] = cart; // Обновляем корзину в объекте
-    localStorage.setItem('cart', JSON.stringify(localStorageData)); // Сохраняем обратно в localStorage
+    localStorage.setItem('cart', JSON.stringify(localStorageData)); // сохраняем обратно в localStorage
     updateCartCount();
 };
 
