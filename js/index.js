@@ -1,19 +1,56 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () =>
+{
+
+
+
+
+
+
+
+
+
+    const registeredUsername = localStorage.getItem('registeredUsername');
+
+
+    if (!registeredUsername) {
+        window.location.href = 'regest.html'; // Замените 'registration.html' на URL вашей страницы регистрации
+    } else {
+        // Если пользователь зарегистрирован, выполняем другие действия (например, показываем приветствие)
+        console.log('Пользователь зарегистрирован'); //Более общее сообщение
+        // Здесь можно добавить код для отображения приветствия или других элементов интерфейса для зарегистрированных пользователей
+    }
+
+
+
+
+
+
+
+
+
+
     const productCards = document.querySelectorAll('.product-card');
 
     productCards.forEach(card => {
         const decreaseButton = card.querySelector('.quantity-selector__button[data-action="minus"]');
-        const increaseButton = card.querySelector('.quantity-selector__button[data-action="plus"]');
-        const quantityValue = card.querySelector('.quantity-selector__value');
-        const addToCartButton = card.querySelector('.btn-outline-warning');
-        const productId = card.dataset.id;
-        const productTitle = card.querySelector('.product-card__title').textContent;
-        const productPrice = parseInt(card.querySelector('.product-card__currency').textContent);
-        const productWeight = card.querySelector('.product-card__weight').textContent;
 
-        // Получаем URL изображения ВНУТРИ цикла
-        const productImage = card.querySelector('.product-card__image');
-        const productImageUrl = productImage.dataset.image;
+        const increaseButton = card.querySelector('.quantity-selector__button[data-action="plus"]');
+
+        const quantityValue = card.querySelector('.quantity-selector__value');
+
+        const addToCartButton = card.querySelector('.btn-outline-warning'); // Находим кнопку "В корзину"
+
+
+        const productId = card.dataset.id; // Получаем ID товара из атрибута data-id
+
+
+        const productTitle = card.querySelector('.product-card__title').textContent; // Получаем название товара
+
+
+        const productPrice = parseInt(card.querySelector('.product-card__currency').textContent); // Получаем цену товара
+
+
+        const productWeight = card.querySelector('.product-card__weight').textContent;
 
 
         decreaseButton.addEventListener('click', () => {
@@ -32,13 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         addToCartButton.addEventListener('click', () => {
-            const quantity = parseInt(card.querySelector('.quantity-selector__value').textContent); // получение количества товара
-            addToCart(productId, productTitle, productPrice, quantity, productWeight, productImageUrl); // вызываем функцию добавление в корзину
+            const quantity = parseInt(card.querySelector('.quantity-selector__value').textContent);// получение количества товара
+            const productImage = card.querySelector('.product-card__image').src;
+            addToCart(productId, productTitle, productPrice, quantity, productWeight,productImage); // вызываем функцию добавление в корзину
         });
     });
 
     // функция добавления товара в корзину
-    const addToCart = (productId, productTitle, productPrice, quantity, productWeight, productImageUrl) => {
+    const addToCart = (productId, productTitle, productPrice, quantity, productWeight,productImage) => {
         let localStorageData = JSON.parse(localStorage.getItem('cart')) || {};
 
 
@@ -54,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 price: productPrice,
                 quantity: quantity,
                 weight: productWeight,
-                imageUrl: productImageUrl
+                imageUrl: productImage
             };
         }
 
