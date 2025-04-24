@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('registration-form');
     const messageDiv = document.getElementById('message');
     const successMessageDiv = document.getElementById('success-message');
-
-    // Initially hide the success message
     successMessageDiv.style.display = 'none';
 
     form.addEventListener('submit', (event) => {
@@ -24,11 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Сохраняем данные в localStorage (только для примера!)
-        // localStorage.setItem('username', username); // Не сохраняем пароль
+        // Сохраняем данные в localStorage
         localStorage.setItem('registeredUsername', username); //Сохраняем имя пользователя
-
-        // Show the success message and hide the form
         form.style.display = 'none';
         messageDiv.style.display = 'none';
         successMessageDiv.style.display = 'block';

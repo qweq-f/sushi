@@ -1,32 +1,13 @@
 document.addEventListener('DOMContentLoaded', () =>
 {
-
-
-
-
-
-
-
-
-
     const registeredUsername = localStorage.getItem('registeredUsername');
-
-
     if (!registeredUsername) {
-        window.location.href = 'regest.html'; // Замените 'registration.html' на URL вашей страницы регистрации
+        window.location.href = 'regest.html';
     } else {
-        // Если пользователь зарегистрирован, выполняем другие действия (например, показываем приветствие)
-        console.log('Пользователь зарегистрирован'); //Более общее сообщение
-        // Здесь можно добавить код для отображения приветствия или других элементов интерфейса для зарегистрированных пользователей
+
+        console.log('Пользователь зарегистрирован')
+
     }
-
-
-
-
-
-
-
-
 
 
     const productCards = document.querySelectorAll('.product-card');
