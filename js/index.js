@@ -1,13 +1,6 @@
 document.addEventListener('DOMContentLoaded', () =>
 {
-    const registeredUsername = localStorage.getItem('registeredUsername');
-    if (!registeredUsername) {
-        window.location.href = 'regest.html';
-    } else {
 
-        console.log('Пользователь зарегистрирован')
-
-    }
 
     const productCards = document.querySelectorAll('.product-card');
 

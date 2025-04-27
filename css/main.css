@@ -47,6 +47,21 @@ body {
     justify-content: space-between;
 }
 
+.header__login {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f35918;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header__login:hover {
+    background-color: #b33306;
+}
+
+
 .logo {
     display: flex;
     align-items: center;
@@ -192,6 +207,14 @@ body {
     color: #e44d26;
     border-color: #e44d26;
     background-color: transparent;
+}
+
+.btn-outline-warning{
+    background-color: #e6e5e5;
+}
+
+.btn-outline-warning:hover {
+    background-color: #c6c6c6
 }
 
 .btn-outline-primary:hover {
