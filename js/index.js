@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', () =>
 {
 
+    const loginContainer = document.getElementById('login-container');
+    const registeredUsername = localStorage.getItem('registeredUsername');
+
+    if(registeredUsername){
+        loginContainer.innerHTML = `<span class="header__greeting">Привет, ${registeredUsername}!</span>`;
+    }
+    else{
+        loginContainer.innerHTML = `<a href="regest.html" class="header__login">Войти</a>`;
+    }
 
     const productCards = document.querySelectorAll('.product-card');
 
