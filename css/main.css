@@ -41,6 +41,13 @@ body {
     background-color: #fff;
     padding: 20px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Фиксируем хедер */
+    top: 0;          /* Прикрепляем его к верху экрана */
+    left: 0;         /* Прикрепляем его к левому краю экрана */
+    z-index: 100;
+}
+.main {
+    padding-top: 100px; /* Примерная высота хедера + небольшой запас */
 }
 
 .header__container {
