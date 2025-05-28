@@ -4,10 +4,15 @@ document.addEventListener('DOMContentLoaded', () =>
     const loginContainer = document.getElementById('login-container');
     const registeredUsername = localStorage.getItem('registeredUsername');
 
-    if(registeredUsername){
-        loginContainer.innerHTML = `<span class="header__greeting">Привет, ${registeredUsername}!</span>`;
-    }
-    else{
+    if(registeredUsername) {
+        loginContainer.innerHTML = `<span class="header__greeting">Привет, ${registeredUsername}!</span>
+<button id="logout-btn" class="btn btn-outline-warning">Выйти</button>`;
+        const logoutButton = document.getElementById('logout-btn');
+        logoutButton.addEventListener('click', () => {
+            localStorage.removeItem('registeredUsername');
+            location.reload();
+        })
+    } else {
         loginContainer.innerHTML = `<a href="regest.html" class="header__login">Войти</a>`;
     }
 
@@ -22,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () =>
         const productTitle = card.querySelector('.product-card__title').textContent; // Получаем название товара
         const productPrice = parseInt(card.querySelector('.product-card__currency').textContent); // Получаем цену товара
         const productWeight = card.querySelector('.product-card__weight').textContent;
+
+
 
 
         decreaseButton.addEventListener('click', () => {
@@ -69,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () =>
 
         localStorageData['cart'] = cart; // Обновляем корзину в объекте данных
         localStorage.setItem('cart', JSON.stringify(localStorageData)); // Сохраняем обратно в localStorage
-        alert('Товар добавлен в корзину!');
+
 
         updateCartCount();
     };
