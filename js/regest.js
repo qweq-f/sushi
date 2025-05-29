@@ -27,8 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         form.style.display = 'none';
         messageDiv.style.display = 'none';
         successMessageDiv.style.display = 'block';
-
-        // очищаем форму
         form.reset();
     });
 

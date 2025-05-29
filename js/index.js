@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded', () =>
         const decreaseButton = card.querySelector('.quantity-selector__button[data-action="minus"]');
         const increaseButton = card.querySelector('.quantity-selector__button[data-action="plus"]');
         const quantityValue = card.querySelector('.quantity-selector__value');
-        const addToCartButton = card.querySelector('.btn-outline-warning'); // Находим кнопку "В корзину"
-        const productId = card.dataset.id; // Получаем ID товара из атрибута data-id
-        const productTitle = card.querySelector('.product-card__title').textContent; // Получаем название товара
-        const productPrice = parseInt(card.querySelector('.product-card__currency').textContent); // Получаем цену товара
+        const addToCartButton = card.querySelector('.btn-outline-warning'); // находим кнопку "В корзину"
+        const productId = card.dataset.id; // получаем ID товара из атрибута data-id
+        const productTitle = card.querySelector('.product-card__title').textContent; // получаем название товара
+        const productPrice = parseInt(card.querySelector('.product-card__currency').textContent); // получаем цену товара
         const productWeight = card.querySelector('.product-card__weight').textContent;
 
 
 
-
+//функционал кнопок - и +
         decreaseButton.addEventListener('click', () => {
             let currentValue = parseInt(quantityValue.textContent);
             if (currentValue > 1) {
@@ -74,8 +74,8 @@ document.addEventListener('DOMContentLoaded', () =>
             };
         }
 
-        localStorageData['cart'] = cart; // Обновляем корзину в объекте данных
-        localStorage.setItem('cart', JSON.stringify(localStorageData)); // Сохраняем обратно в localStorage
+        localStorageData['cart'] = cart; // обновляем корзину в объекте данных
+        localStorage.setItem('cart', JSON.stringify(localStorageData)); // сохраняем обратно в localStorage
 
 
         updateCartCount();

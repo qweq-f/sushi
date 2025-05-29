@@ -103,24 +103,18 @@ const updateCartCount = () => {
 const checkoutButton = document.getElementById('checkout-button');
 
 checkoutButton.addEventListener('click', () => {
-    //  Получаем данные о корзине из localStorage
+    //  получаем данные о корзине из localstorage
     let localStorageData = JSON.parse(localStorage.getItem('cart')) || {};
     let cart = localStorageData['cart'] || {};
 
-    //  Проверяем, что корзина не пуста
+    //  проверяем, что корзина не пуста
     if (Object.keys(cart).length === 0) {
         alert('Корзина пуста!');
         return;
     }
-
-    //  Очищаем корзину (имитация успешного оформления заказа)
-    localStorage.removeItem('cart');
-
-    //  Обновляем счетчик товаров
-    updateCartCount();
-
-    //  Перенаправляем на страницу "Спасибо за заказ"
-    window.location.href = 'thank-you.html';
+    localStorage.removeItem('cart');//  очищаем корзину
+    updateCartCount();//  обновляем счетчик товаров
+    window.location.href = 'thank-you.html';//  перенаправляем на страницу
 });
 
 displayCart();
